@@ -36,6 +36,15 @@ func main() {
 
 	var prizess Prizes
 
+	rname    string `json:"surname"`
+	Motivation string `json:"motivation"`
+	Share      string `json:"share"`
+}
+
+func main() {
+	jsonFile, err := os.Open("prize.json")
+	if err != nil {
+		fmt.Println(err)
 	json.Unmarshal(file, &prizess)
 
 	// template, _ := template.ParseFiles("hello.html")
